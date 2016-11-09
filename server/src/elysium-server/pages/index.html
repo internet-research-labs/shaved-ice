@@ -1,0 +1,24 @@
+<html>
+  <body>
+  What
+  <script>
+var conn = new WebSocket("ws://localhost:8080/Adrilon");
+
+conn.onopen = function () {
+  console.log("open");
+};
+
+conn.onconnect = function () {
+  console.log("connect");
+};
+
+conn.onmessage = function () {
+  console.log("message");
+};
+
+conn.onclose = function () {
+  console.log("close");
+};
+  </script>
+  </body>
+</html>
